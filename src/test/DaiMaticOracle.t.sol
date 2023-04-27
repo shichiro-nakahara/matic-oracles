@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity >=0.8.4;
 
-import "forge-std/console.sol";
 import "forge-std/Test.sol";
-import "../src/DaiMaticOracle.sol"; 
-import "../src/MockChainlinkOracle.sol"; 
+import "../DaiMaticOracle.sol"; 
+import "../MockChainlinkOracle.sol"; 
 
 contract DaiMaticOracleTest is DSTest {
 
