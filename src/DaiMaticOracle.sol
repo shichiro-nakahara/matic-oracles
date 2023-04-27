@@ -31,7 +31,9 @@ contract DaiMaticOracle {
             /*uint80 answeredInRound*/
         ) = maticUsdPriceFeed.latestRoundData();
 
-        return daiUsd * int(10 ** daiUsdPriceFeed.decimals()) / maticUsd;
+        // Assumption here is DAI-USD and MATIC-USD prices have the same amount of decimal
+        // places and that DAI-MATIC price should be given to 18 decimals
+        return daiUsd * int(10 ** 18) / maticUsd;
     }
 
     function latestAnswer() external view returns (int256) {
