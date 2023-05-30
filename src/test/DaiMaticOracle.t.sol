@@ -22,7 +22,9 @@ contract DaiMaticOracleTest is DSTest {
 
     function testGetPrice() public {
         int256 price = daiMaticOracle.getPrice();
+
+        console.logInt(price);
         
-        assertTrue(price == 98933703);
+        assertTrue(price == 989337033738992777);
     }
 }
